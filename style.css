@@ -1,0 +1,366 @@
+body {
+    background-color: rgb(39, 39, 39);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #232323 ;
+ position: relative;
+}
+
+
+header {
+    background-color:#3b3b3b ;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.header {
+
+    box-shadow: 0px 10px 10px rgb(23, 23, 23);
+    width: 100%;
+    height: 80px;
+}
+
+.photo {
+    width: 4%;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 0.2s linear forwards, moveX 0.3s linear forwards;
+    animation-delay: 0.7s;
+    transition: width 0.3s ease;
+    text-align: center;
+    padding: 10px 10px;
+    transform-origin: center;
+    position: relative;
+
+}
+
+.photo:hover {
+    transform: scale(0,2);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveX {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-width: 1500px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    max-width: 800px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+}
+
+.main__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+height: 100%;
+max-width: 600px;
+
+}
+
+.text {
+    font-size: 58px;
+    color: rgb(143, 143, 143);
+    transform: translateY(90%);
+    position: absolute;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+
+[class^="kastom-"] {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.kastom-1 {
+    animation: blick 0.1s linear;
+animation-delay: 2s;
+}
+.kastom-3 {
+    animation: blick 0.1s linear;
+animation-delay: 2.2s;
+}
+.kastom-4 {
+    animation: blick 0.1s linear;
+animation-delay: 3.2s;
+}
+.kastom-6{
+    animation: blick 0.1s linear;
+animation-delay: 2s;
+}
+.kastom-6{
+    animation: blick 0.1s linear;
+animation-delay: 2.4s;
+}
+.kastom-10 {
+    animation: blick 0.1s linear;
+animation-delay: 3s;
+}
+.kastom-11 {
+    animation: blick 0.1s linear;
+animation-delay: 2.6s;
+}
+.kastom-12 {
+    animation: blick 0.1s linear;
+animation-delay: 2.8s;
+}
+
+
+@keyframes blick {
+    0% {
+        color: rgb(143, 143, 143);
+
+    }
+
+    100% {
+
+        color: rgb(136, 67, 248);
+
+    }
+}
+
+.text2 {
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    font-size:38px;
+    color: white;
+    letter-spacing: 1px;
+    opacity: 0.7;
+
+}
+
+
+
+.rest {
+    display: inline-block;
+color: rgb(131, 60, 246);
+opacity: 0.7;
+text-decoration: none;
+}
+
+
+.main__photo {
+    top: 150px;
+    position: absolute;
+    width: 18%;
+    display: block;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 1500px;
+    height: 100px;
+
+}
+
+.all__photo {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+
+
+.telegram, .github, .steam {
+   
+    width:  30%; 
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steam__photo {
+    animation: move 0.2s linear 0.2s;
+    transition: transform 0.1s linear;
+    width: 75px;
+    height: auto;
+    animation: move 0.6s linear;
+}
+
+.github__photo {
+    animation: move 0.2s linear 0.4s; 
+    transition: transform 0.1s linear;
+    width: 70px;
+    height: auto;
+    animation: move 0.4s linear;
+}
+
+.telegram__photo {
+    animation: move 0.2s linear 0.6s;
+    transition: transform 0.1s linear;
+    width: 70px;
+    height: auto;
+    animation: move 0.2s linear;
+}
+
+
+
+@keyframes move {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+
+    }
+    20% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.telegram__photo:hover, .github__photo:hover, .steam__photo:hover {
+    transform: scale(0.9);
+}
+
+
+
+@media (max-width: 1200px) {
+    .photo {
+        width: 6%;
+    }
+
+    .text {
+        font-size: 50px;
+    }
+
+    .text2 {
+        font-size: 32px;
+    }
+
+    .main__photo {
+        width: 25%;
+    }
+
+    .steam__photo, .github__photo, .telegram__photo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .photo {
+        width: 8%;
+    }
+
+    .text {
+        font-size: 42px;
+    }
+
+    .text2 {
+        font-size: 28px;
+    }
+
+    .main__photo {
+        width: 30%;
+    }
+
+    .steam__photo, .github__photo, .telegram__photo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo {
+        width: 12%;
+    }
+
+    .text {
+        font-size: 36px;
+    }
+
+    .text2 {
+        font-size: 24px;
+    }
+
+    .main__photo {
+        width: 40%;
+    }
+
+    .steam__photo, .github__photo, .telegram__photo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .photo {
+        width: 15%;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .text2 {
+        font-size: 19px;
+        white-space: nowrap;
+
+    }
+
+    .main__photo {
+        width: 50%;
+    }
+
+    .steam__photo, .github__photo, .telegram__photo {
+        width: 50px;
+    }
+}
+
+
+
+
